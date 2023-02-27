@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "a99ec193-1b92-4f5e-b5b1-aa7b883c301c",
-		"name": "New Collection",
+		"name": "dummyapi.io",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26061554"
 	},
@@ -28,15 +28,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user"
 					]
 				}
@@ -62,15 +58,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user"
 					]
 				}
@@ -100,15 +92,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user?page=1&limit=5",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user?page=1&limit=5",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user"
 					],
 					"query": [
@@ -172,15 +160,11 @@
 					]
 				},
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/create",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/create",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"create"
 					]
@@ -220,15 +204,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}"
 					]
@@ -255,15 +235,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}"
 					]
@@ -319,15 +295,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/post/create",
-					"protocol": "https",
+					"raw": "{{baseURL}}/post/create",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"post",
 						"create"
 					]
@@ -354,15 +326,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}/post",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}/post",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}",
 						"post"
@@ -390,15 +358,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/post",
-					"protocol": "https",
+					"raw": "{{baseURL}}/post",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"post"
 					]
 				}
@@ -436,15 +400,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/comment/create",
-					"protocol": "https",
+					"raw": "{{baseURL}}/comment/create",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"comment",
 						"create"
 					]
@@ -471,15 +431,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}/comment",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}/comment",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}",
 						"comment"
@@ -507,15 +463,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/comment/{{comentId}}",
-					"protocol": "https",
+					"raw": "{{baseURL}}/comment/{{comentId}}",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"comment",
 						"{{comentId}}"
 					]
@@ -542,15 +494,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}/comment",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}/comment",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}",
 						"comment"
@@ -578,15 +526,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}"
 					]
@@ -613,15 +557,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dummyapi.io/data/v1/user/{{userId}}",
-					"protocol": "https",
+					"raw": "{{baseURL}}/user/{{userId}}",
 					"host": [
-						"dummyapi",
-						"io"
+						"{{baseURL}}"
 					],
 					"path": [
-						"data",
-						"v1",
 						"user",
 						"{{userId}}"
 					]
@@ -663,6 +603,13 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
