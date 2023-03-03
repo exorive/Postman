@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "2fdc682f-4ab3-40bb-a9d3-6ee373b3e238",
+		"name": "Openweathermap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22517398"
+	},
+	"item": [
+		{
+			"name": "Lviv's current weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?lat=49.8383&lon=24.0232&appid=d84ab204004043c1f784c5a94c90d6f1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "49.8383"
+						},
+						{
+							"key": "lon",
+							"value": "24.0232"
+						},
+						{
+							"key": "appid",
+							"value": "d84ab204004043c1f784c5a94c90d6f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vinnytsia weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=689558&appid=d84ab204004043c1f784c5a94c90d6f1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "689558"
+						},
+						{
+							"key": "appid",
+							"value": "d84ab204004043c1f784c5a94c90d6f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kyiv weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=d84ab204004043c1f784c5a94c90d6f1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyiv"
+						},
+						{
+							"key": "appid",
+							"value": "d84ab204004043c1f784c5a94c90d6f1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
