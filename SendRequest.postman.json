@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "b879cf66-934a-4107-be70-891785ddff6f",
+		"name": "Send Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26061554"
+	},
+	"item": [
+		{
+			"name": "addCity",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let cityName = \"Oslo\";\r",
+							"\r",
+							"pm.collectionVariables.set(\"cityName\", cityName);\r",
+							"let cityGUID = pm.variables.replaceIn(\"{{$guid}}\");\r",
+							"pm.collectionVariables.set(\"cityGUID\", cityGUID);\r",
+							"\r",
+							"let url = \"https://public.opendatasoft.com/api/records/1.0/search/?dataset=geonames-all-cities-with-a-population-1000&q=\" + cityName;\r",
+							"\r",
+							"const requestObject = {\r",
+							"  url: url,\r",
+							"  method: 'GET',\r",
+							"  header: {\r",
+							"    'Content-Type': 'application/json',\r",
+							"  },\r",
+							"};\r",
+							"\r",
+							"pm.sendRequest(requestObject, (error, response) => {\r",
+							"\tlet population = response.json().records[0].fields.population; //get access to json object from response body\r",
+							"    pm.collectionVariables.set(\"population\", population);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"{{cityName}}\",\r\n  \"population\": \"{{population}}\",\r\n  \"_id\": \"{{cityGUID}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mikhailovichp.editorx.io/mysite-46/_functions/newCity",
+					"protocol": "https",
+					"host": [
+						"mikhailovichp",
+						"editorx",
+						"io"
+					],
+					"path": [
+						"mysite-46",
+						"_functions",
+						"newCity"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cityName",
+			"value": ""
+		},
+		{
+			"key": "cityGUID",
+			"value": ""
+		},
+		{
+			"key": "population",
+			"value": ""
+		}
+	]
+}
